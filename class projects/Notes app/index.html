@@ -81,12 +81,18 @@
 <div id="homecontainer" class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
 
 <h1 class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">Hy, Good Morning</h1>
-<div id="textarea">
+<div id="textarea"><textarea class=" border p-4 w-full" name="Notes" id="textarea"></textarea>
 
 </div>
 <div>
 <button onclick="submitNote()"
 class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">save Note</button>
+<div>
+  <button  class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"" id="logout" onclick="logout()">logout</button>
+</div>
+
+
+
 </div>
 <div id="displaynotes">
 
@@ -98,6 +104,7 @@ class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm f
 </div>
 
 </div>
+
 
 
 

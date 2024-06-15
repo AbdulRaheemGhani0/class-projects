@@ -7,7 +7,7 @@ var logincontainer = document.getElementById(`logincontainer`);
 var homecontainer = document.getElementById(`homecontainer`);
 var ul = document.getElementById(`ul`);
 
-
+cheackifuserlogin() ;
 function loginuser(){
     if(!email.value || !password.value){
         alert(`please enter email and password`);
@@ -15,7 +15,7 @@ function loginuser(){
     
     else 
      JSON.stringify(password);
-    JSON.stringify(email);
+    JSON.stringify(email);rendernote()
     localStorage.setItem("email", email.value )
     localStorage.setItem("password", password.value )
     email.innerHTML = ``
@@ -23,16 +23,21 @@ function loginuser(){
     
     
     cheackifuserlogin();
-    }
+    
+}
+
+    
     
  
 function cheackifuserlogin(){
-    var email = localStorage.getItem("email")
-if(email){
+    var email = localStorage.getItem("email");
+    email = JASON.parse("email")
+    
+if(email === email){
     // note =JSON.parse(note)
     homecontainer.style.display="block"
 logincontainer.style.display="none"
-useremail.innerText = email;
+useremail.innerHTML = email;
 
 }
 else {
@@ -40,92 +45,47 @@ else {
 logincontainer.style.display="block"
 
 cheackifuserlogin();
+
 }
 
 }
 
 
  function submitNote() {
-    var note = note.value
-  notevalue = JSON.stringify(note);
-  localStorage.setItem("note", notevalue);
+    note.innerHTML = note.value
+  note = JSON.stringify(note);
+  localStorage.setItem("note", note);
 
 
-
+  
   
  }
 
  function getvaluefromlocalstorage(){
     localStorage.getItem("email")
 localStorage.getitem("note")
- note =JSON.parse(note) 
- email =JSON.parse(email)
+ note =JSON.parse("note") 
+ email =JSON.parse("email")
 
 
-rendernote()
+
  }
 
 function rendernote(){
+    var ul = document.getElementById(`ul`);
 
-ul.innerHTML = `<li>${note} ,</br> ${email}</li>`
+
+ul.innerHTML = `<li>${note}  ${email}</li>`
 }
-// localStorage.clear();
 
 
-
-
-
-
-
-
-
-
-
-
+function logout(){
+ localStorage.clear();
 
  
-// var notearea = document.getElementById(`notearea`);
-// notearea
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// var email = document.getElementById("gamil")
-// email.innerHTML = `${email.value}`
-// // console.log(email)
-// var password = document.getElementById("password")
-// password.innerHTML = `${password.value}`
-// // console.log(password)
-// function submitFormData(){
-   
-// console.log(`Email==>${email.value},Password==>${password.value}
-// `)
-// email.value=""
-// password.value= ""
-// }
-
-//  var loginbtn = document.getElementById(`login-btton`)
-//  loginbtn.innerHTML = function 
-
-// function login() {
-// console.log(`${email.value}`,`${password.value}`)
-
-
-
-
-// }
 
 
 
