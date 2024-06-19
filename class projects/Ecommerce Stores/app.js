@@ -1,4 +1,5 @@
 var cards = document.getElementById("cards");
+var cartproducts = [""]
 
 var products = [
   {
@@ -294,7 +295,7 @@ for (let i = 0; i < products.length; i++) {
          
        </p>
      </div>
-     <a button class="flex items-center justify-center rounded-md bg-slate-900 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
+     <a button onclick"addtocart()" class="flex items-center justify-center rounded-md bg-slate-900 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
        
        Add to cart</button
      >
@@ -303,6 +304,12 @@ for (let i = 0; i < products.length; i++) {
  `;
 }
 
+var addtocart = (index) => {
+  cartproducts.push(index)
+
+console.log{cartproducts}
+
+};
 
 
 
